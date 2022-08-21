@@ -33,6 +33,6 @@ body {
     bottom: -40px;
     right: -30px;
 }
-.player{
+.player, .side-bar{
     background-color: #000000;
 }
