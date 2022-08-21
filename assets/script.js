@@ -44,6 +44,9 @@ document.getElementById("calculate").addEventListener("click", function (e) {
 });
 
 document.getElementById("calculate-total").addEventListener("click", function (e) {
+    //auto recalculate cost before total cost
+    document.getElementById("calculate").click();
+
     let player_cost = parseIntVal(document.getElementById("player-expense").innerText);
     total_expense.innerText = 0;
     if(player_cost<1){
@@ -51,6 +54,14 @@ document.getElementById("calculate-total").addEventListener("click", function (e
         return false;
     }
     let manager = get_input_int("cost-manager");
+    if(manager<1){
+        alert("Invalid manager cost.");
+        return false;
+    }
     let coach = get_input_int("cost-coach");
+    if(coach<1){
+        alert("Invalid coach cost.");
+        return false;
+    }
     total_expense.innerText = player_cost + manager + coach;
 });
