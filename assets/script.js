@@ -42,3 +42,15 @@ document.getElementById("calculate").addEventListener("click", function (e) {
     }
     player_expense.innerText = cost * total;
 });
+
+document.getElementById("calculate-total").addEventListener("click", function (e) {
+    let player_cost = parseIntVal(document.getElementById("player-expense").innerText);
+    total_expense.innerText = 0;
+    if(player_cost<1){
+        alert("Invalid player cost.");
+        return false;
+    }
+    let manager = get_input_int("cost-manager");
+    let coach = get_input_int("cost-coach");
+    total_expense.innerText = player_cost + manager + coach;
+});
