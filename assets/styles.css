@@ -15,15 +15,24 @@ body {
     background-color: #000000;
 }
 
-
 .title {
+    z-index: 1112;
     font-family: 'Berkshire Swash';
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 400;
     color: #FF5E19;
+}
+
+.header-logo {
+    width: 100px;
+    top: 50px;
+    z-index: 1111;
 }
 
 .title svg {
     bottom: -40px;
     right: -30px;
+}
+.player{
+    background-color: #000000;
 }
